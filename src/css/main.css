@@ -20,3 +20,109 @@ html{
     灰色最深也就是在 #222 这个样子 */
     color:#222;
 }
+/* ::selection 是对当前激活选中区（即 高亮文本）进行操作 */
+
+::selection{
+    background-color:#b3d4fc;
+    text-shadow:none;
+}
+
+ul{
+    margin:0;
+    padding:0;
+}
+
+li{
+    list-style:none;
+}
+
+a{
+    color:#666;
+    text-decoration:none;
+}
+
+a:hover,
+a:active{
+    color:#0ae;
+    text-decoration:underline;
+}
+
+/*********
+* 工具样式
+**********/
+
+.center-block{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.pull-right{
+    float: right !important;
+}
+
+.pull-left{
+    float:left !important;
+}
+
+.text-right{
+    text-align: right !important;
+}
+
+.text-left{
+    text-align: right !important;
+}
+.text-center{
+    text-align: center !important;
+}
+
+.show{
+    display: block !important;
+}
+
+.hide{
+    display: none !important;
+}
+
+.invisible{
+    visibility:hidden;
+}
+
+.text-hidden{
+    font:0/0 a;
+    color:transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border:0;
+}
+
+.clearfix:before,
+.clearfix:after{
+    content:'';
+    display: table;
+}
+
+.clearfix:after{
+    clear:both;
+}
+
+.clearfix{
+    /* IE 中，触发 hasLayout 来清除浮动 */
+    /* 可以用来兼容IE 6、7 */
+    zoom:1;
+}
+
+
+/******************
+ * 浏览器更新提示样式
+ ******************/
+
+ .browserupgrade{
+     margin:0;
+     padding:1em;
+     background:#ccc;
+ }
+
+.browserupgrade a{
+    color:#f36973;
+}
