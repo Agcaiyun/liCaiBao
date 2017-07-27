@@ -108,7 +108,7 @@ a:active{
 
 .clearfix{
     /* IE 中，触发 hasLayout 来清除浮动 */
-    /* 可以用来兼容IE 6、7 */
+    /* 可以用来兼容IE 6、7，因为zoom：1 才能触发 haslayout */
     zoom:1;
 }
 
@@ -119,10 +119,88 @@ a:active{
 
  .browserupgrade{
      margin:0;
-     padding:1em;
+     padding:1rem;
      background:#ccc;
  }
 
 .browserupgrade a{
     color:#f36973;
 }
+
+/**********
+ * 页眉样式
+ **********/
+
+header{
+     width:100%;
+}
+
+header .top{
+     line-height: 3rem;
+     padding:0 1.5rem;
+     background-color:#555;
+     color:#fff;
+     border-bottom:1px solid #ecc000;
+}
+
+header .top .tel{
+    color:#f1f1f1;
+    float:left;
+}
+
+header .top ul{
+    text-align: right;
+}
+
+header .top ul li{
+    display: inline-block;
+}
+
+/* 用相邻选择器实现导航两边没有小竖线 */
+header .top ul li+li {
+    border-left:1px solid #999;
+    /* 仅针对 chrome 浏览器，其他解决空白字符的问题见 notes 笔记 */
+    margin-left:-3px;
+}
+
+header .top ul li a{
+    display: inline-block;
+    padding:0 1.5rem;
+    color:#fff;
+}
+
+header .main{
+    background-color:#f4f4f4;
+    padding:0;
+}
+
+header .main .brand{
+    float:left;
+    padding:1rem 1.5rem;
+}
+
+header .main ul{
+    text-align: right;
+}
+
+header .main ul li{
+    display: inline-block;
+    border-left: 1px solid #f0ede9;
+}
+
+header .main ul li a{
+    display: inline-block;
+    padding:0 2.5rem;
+    line-height: 5.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #7c7a65;
+    /* text-display:none; */
+}
+
+header .main ul li a:hover,
+header .main ul li a:active{
+    color: #ffb300;
+    background-color: #f8f6f1;
+}
+
